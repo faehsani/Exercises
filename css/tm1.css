@@ -3,39 +3,63 @@ body {
     text-align: center;
     font-size: 16px;
     color: black;
-    line-height: 6rem
+}
+
+* {
+    box-sizing: border-box;
 }
 
 .section {
     background-color: linen;
-    width: 100%;
-    height: 10rem;
+}
+
+.clear {
+    clear: both;
 }
 
 #box1,
 #box2,
 #box3 {
+
     background-color: burlywood;
-    height: 8rem;
+    padding: 2rem;
     margin: 1rem;
+    width: calc(100% - 2rem);
+
+    float: left;
+    min-height: 150px;
 }
 
 #box1 {
-    float: left;
-    width: 29%;
+
 }
 
 #box2 {
-    border-radius: 5rem;
-    float: left;
-    width: 10%;
-    margin-left: 10rem;
+    padding: 0;
+    background-color: transparent;
+}
+
+#box2 .circle {
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    border-radius: 50%;
+    background-color: burlywood;
 }
 
 #box3 {
-    float: right;
-    width: 29%;
 }
+
+@media all and (min-width:800px)  {
+    #box1,
+    #box2,
+    #box3 {
+        width: calc(33.33% - 2rem);
+    }
+}
+
+
 
 .sidebar {
     background-color: beige;
